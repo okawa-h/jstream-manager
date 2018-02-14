@@ -30,9 +30,7 @@
 		(function loadBaseScript() {
 
 			var $script = $('<script></script>');
-			$script.on('load',function() {
-				init();
-			});
+			$script.on({ 'load':init });
 			$script.prop('src','https://ssl-cache.stream.ne.jp/www' + FILE_NO + '/' + UNIQUE_ID + '/jmc_pub/jmc_swf/player/t3/obj.js');
 			var location = $('script').get(0);
 			location.parentNode.insertBefore($script.get(0),location);
